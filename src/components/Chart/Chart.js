@@ -6,8 +6,10 @@ function Chart({ data }) {
   return (
     <div>
       {data.map(({ value, label }, index) => (
-        <ChartBar key={index} value={value} maxValue={null} />
+        <ChartBar key={index} value={value} maxValue={null} label={label} />
       ))}
     </div>
   );
 }
+
+export default Chart;
