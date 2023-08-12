@@ -21,7 +21,7 @@ function ExpenseForm({ onSaveNewExpense, onCancel }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const newExpense = { title, amount, date: new Date(date) };
+    const newExpense = { id: Math.random(), title, amount: Number(amount), date: new Date(date) };
     onSaveNewExpense(newExpense);
     setTitle('');
     setAmount('');
